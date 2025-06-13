@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> https://www.fishdogrestaurante.com </title>
+</head>
+<boddy>
+<font size =4>
+<table bgcolor=#151723>
+<tr>
+<td> <bgcolor=#151723> <a href="..\Fish dog\indice1.html"><img src="..\Fish dog\logo.jpg" width="150" height="150"></a>
+</font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\quienes somos.html" style="color:white">Quienes Somos </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\menu.html" style="color:white">Mundo Mejor </a> </td> </font>
+<br>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\innovacion.html"style="color:white"> Innovacion </a> </td> </font> 
+<br>
+<td align=center width=500> <font size=50> <a href="..\kids.html" style="color:white"> Politicas </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\Mision.html"style="color:white"> Mision </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\Vision.html"style="color:white"> Vision </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\Valores.html"style="color:white">Valores </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Bebidas.html"style="color:white">Contacto </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Bebidas.html"style="color:white"> Visitanos </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\producto.html""style="color:white"> Producto </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\historia.html"style="color:white"> Historia </a> </td> </font>
+<td align=center width=500> <font size=50> <a href="..\Fish dog\logo.html"style="color:white"> Logotipo </a> </td> </font>
+</tr>
+</table>
+<br>
+<br>
+
+</html> 
+
+
+
+
+
+
+
+
+<!-- Menú de navegación -->
+<div class="menu">
+  <a href="..\Fish dog\indice1.html">
+    <img class="logo" src="..\Fish dog\logo.jpg" alt="Logo">
+  </a>
+  <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+  <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+  <a href="..\Fish dog\innovacion.html">Innovacion</a>
+  <a href="..\Fish dog\politicas.html">Politicas</a>
+  <a href="..\Fish dog\Mision.html">Mision</a>
+  <a href="..\Fish dog\Vision.html">Vision</a>
+  <a href="..\Fish dog\Valores.html">Valores</a>
+  <a href="..\Fish dog\contacto.HTML">Contacto</a>
+  <a href="..\Fish dog\ubicacion.HTML">Visitanos</a>
+  <a href="..\Fish dog\producto.html">Producto</a>
+  <a href="..\Fish dog\historia.html">Historia</a>
+  <a href="..\Fish dog\logo.html">Logotipo</a>
+
+  <!-- Carrito al final -->
+  <a href="..\Fish dog\carrito.HTML" style="margin-left: 40px;">
+    <img src="..\Fish dog\carrito.png" alt="Carrito" style="height: 80px; border-radius: 10px;">
+  </a>
+</div>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7e06f;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .menu {
+   background-color: #151723;
+      overflow-x: auto;
+      white-space: nowrap;
+font-family: Arial, sans-serif;
+ padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    }
+
+    .menu a {
+         display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .menu a:hover {
+  background-color: #2e2e38;
+    }
+
+    .menu img.logo {
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1000px;
+    }
+
+    h1 {
+      color: #d52b1e;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .producto {
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .producto:hover {
+      background-color: #ffe5d0;
+      box-shadow: 0 0 8px #d52b1e88;
+    }
+
+    .producto img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+      border: 2px solid #d52b1e;
+    }
+
+    .producto-info {
+      flex: 1;
+    }
+
+    .producto h3 {
+      margin: 0 0 8px;
+      color: #d52b1e;
+      font-weight: 700;
+      font-family: 'Arial Black', Gadget, sans-serif;
+    }
+
+    .producto p {
+      margin: 0 0 12px;
+      font-size: 0.95em;
+      line-height: 1.3;
+    }
+
+    .producto p strong {
+      color: #bf2600;
+      font-size: 1.1em;
+    }
+
+    .producto input[type="number"] {
+      width: 60px;
+      padding: 4px;
+      font-size: 1em;
+      border: 1px solid #d52b1e;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      padding: 6px 12px;
+      margin-left: 8px;
+      background-color: #d52b1e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      font-family: 'Arial Black', Gadget, sans-serif;
+    }
+
+    button:hover {
+      background-color: #a21a14;
+    }
+
+    button.remove {
+      background-color: #ffa500;
+    }
+
+    button.remove:hover {
+      background-color: #cc8400;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 1.5em;
+      margin-top: 30px;
+      font-weight: 900;
+      color: #bf2600;
+      font-family: 'Arial Black', Gadget, sans-serif;
+    }
+
+    .pago button {
+      padding: 12px 20px;
+      background-color: #d52b1e;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 900;
+      margin-top: 25px;
+      width: 100%;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      letter-spacing: 1.5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .pago button:hover {
+      background-color: #a21a14;
+    }
+
+    .pago ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .pago li {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 8px;
+      font-weight: 700;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      box-shadow: 1px 1px 6px #d52b1e66;
+    }
+
+    .pago a {
+      color: #d52b1e;
+      text-decoration: none;
+    }
+
+    .pago a:hover {
+      text-decoration: underline;
+    }
+
+    .correo {
+      margin-top: 30px;
+      text-align: center;
+      font-weight: 700;
+      font-family: 'Arial Black', Gadget, sans-serif;
+    }
+
+    .correo a {
+      color: #d52b1e;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.1em;
+    }
+
+    .correo a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .producto {
+        flex: 1 1 100%;
+      }
+
+      .productos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="..\Fish dog\indice1.html">
+      <img class="logo" src="..\Fish dog\logo.jpg" alt="Logo">
+    </a>
+    <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+    <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+    <a href="..\Fish dog\innovacion.html">Innovacion</a>
+    <a href="..\Fish dog\politicas.html">Politicas</a>
+    <a href="..\Fish dog\Mision.html">Mision</a>
+    <a href="..\Fish dog\Vision.html">Vision</a>
+    <a href="..\Fish dog\Valores.html">Valores</a>
+    <a href="..\Fish dog\contacto.HTML">Contacto</a>
+    <a href="..\Fish dog\ubicacion.HTML">Visitanos</a>
+    <a href="..\Fish dog\producto.html">Producto</a>
+    <a href="..\Fish dog\historia.html">Historia</a>
+    <a href="..\Fish dog\logo.html">Logotipo</a>
+    <a href="..\Fish dog\carrito.HTML" style="margin-left: 40px;">
+      <img src="..\Fish dog\carrito.png" alt="Carrito" style="height: 50px; border-radius: 10px;">
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Carrito de Compras</h1>
+
+    <div class="productos-grid">
+      <!-- Producto 1 -->
+      <div class="producto" data-precio="80">
+        <img src="..\Fish dog\hotdog.jpg" alt="hot dog" />
+        <div class="producto-info">
+          <h3>Hot Dog</h3>
+          <p>Hot Dog de salchicha de atun con verdura fresca acompañado de papas a la francesa</p>
+          <p><strong>$80.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" data-precio="90">
+        <img src="..\Fish dog\hot.png"alt="hot dog" />
+        <div class="producto-info">
+          <h3>Hot Dog Especial</h3>
+          <p>Hot Dog de salchicha de atun con jamon y queso amarillo, con verdura fresca acompañado de papas a la francesa</p>
+          <p><strong>$90.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" data-precio="30">
+        <img src="..\Fish dog\papas.jpg" alt="bebida" />
+        <div class="producto-info">
+          <h3>Orden de papas a la francesa </h3>
+          <p>Media orden de papas a la francesa</p>
+          <p><strong>$30.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" data-precio="70">
+        <img src="..\Fish dog\salchipapas.jpg" alt="hamburguesa" />
+        <div class="producto-info">
+          <h3>Salchipulpos</h3>
+          <p>Combinacion de salchicha de atun con papas a la francesa acompañada de aderezos</p>
+          <p><strong>$70.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" data-precio="20">
+        <img src="..\Fish dog\coca.jpg" alt="refresco" />
+        <div class="producto-info">
+          <h3>Refresco</h3>
+          <p>Coca cola de lata de 355ml</p>
+          <p><strong>$20.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" data-precio="30">
+        <img src="..\Fish dog\aguas.jpg" alt="agua" />
+        <div class="producto-info">
+          <h3>Agua de sabor del día</h3>
+          <p>Agua de 1 litro, sabor del día</p>
+          <p><strong>$30.00 MXN</strong></p>
+          <input type="number" min="0" max="100" value="0" onchange="calcularTotal()" />
+          <button onclick="agregar(this)">Agregar</button>
+          <button class="remove" onclick="quitar(this)">Quitar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      Total: $<span id="total">0.00</span> MXN
+    </div>
+
+    <div class="pago">
+      <button onclick="mostrarOpciones()">Pagar</button>
+      <div id="opcionesPago" style="display: none;">
+        <p>Selecciona un método de pago:</p>
+        <ul>
+          <li><a href="https://www.paypal.com/mx/home" target="_blank">PayPal</a></li>
+          <li><a href="https://www.mercadopago.com.mx/" target="_blank">Mercado Pago</a></li>
+          <li><a href="https://www.bbva.mx/personas/productos/cuentas/cuentas-bancarias.html" target="_blank">Transferencia Bancaria</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="correo">
+      <p>¿Tienes dudas? <a href="https://mail.google.com/mail/?view=cm&fs=1&to=floralfresh532@gmail.com" target="_blank">Envíanos un correo</a></p>
+    </div>
+  </div>
+
+  <script>
+    function agregar(btn) {
+      const input = btn.previousElementSibling;
+      if (parseInt(input.value) < parseInt(input.max)) {
+        input.value = parseInt(input.value) + 1;
+        calcularTotal();
+      }
+    }
+
+    function quitar(btn) {
+      const input = btn.parentElement.querySelector("input");
+      if (parseInt(input.value) > 0) {
+        input.value = parseInt(input.value) - 1;
+        calcularTotal();
+      }
+    }
+
+    function calcularTotal() {
+      let total = 0;
+      const productos = document.querySelectorAll(".producto");
+      productos.forEach((producto) => {
+        const precio = parseFloat(producto.getAttribute("data-precio"));
+        const input = producto.querySelector("input");
+        let cantidad = parseInt(input.value);
+        if (isNaN(cantidad) || cantidad < 0) cantidad = 0;
+        if (cantidad > parseInt(input.max)) cantidad = parseInt(input.max);
+        input.value = cantidad;
+        total += precio * cantidad;
+      });
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    function mostrarOpciones() {
+      const opciones = document.getElementById("opcionesPago");
+      opciones.style.display = opciones.style.display === "none" ? "block" : "none";
+    }
+
+    window.onload = calcularTotal;
+  </script>
+</body>
+</html>
+

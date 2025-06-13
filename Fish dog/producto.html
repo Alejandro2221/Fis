@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto | Fishdog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color:#fff3b0;
+      color: #222;
+    }
+
+    nav {
+      background-color: #151723;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.2em;
+      font-family: Arial, sans-serif;
+    }
+
+    nav a:hover {
+      background-color: #2e2e38;
+    }
+
+    nav img {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    header {
+      background-color: #ffd95c;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .product-image video {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .product-details {
+      flex: 1 1 400px;
+    }
+
+    .product-details h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #8a4f00;
+      font-family: Arial, sans-serif;
+    }
+
+    .product-details p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+      font-family: Arial, sans-serif;
+    }
+
+    .features {
+      background-color: #fff3cd;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .features h3 {
+      font-size: 1.8em;
+      color: #8a4f00;
+      margin-bottom: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      justify-content: center;
+    }
+
+    .feature {
+      background: white;
+      border-left: 5px solid #ffb703;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .feature h4 {
+      margin: 0;
+      color: #e76f51;
+      font-size: 1.5em;
+      font-family: Arial, sans-serif;
+    }
+
+    .feature p {
+      margin-top: 8px;
+      font-size: 0.95em;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .banner {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .banner img {
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #ffd95c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menú de navegación -->
+<nav>
+  <a href="..\Fish dog\indice1.html"><img src="..\Fish dog\logo.jpg" alt="Logo" width="60" height="60"></a>
+  <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+  <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+  <a href="..\Fish dog\innovacion.html">Innovación</a>
+  <a href="..\Fish dog\politicas.html">Políticas</a>
+  <a href="..\Fish dog\Mision.html">Misión</a>
+  <a href="..\Fish dog\Vision.html">Visión</a>
+  <a href="..\Fish dog\Valores.html">Valores</a>
+  <a href="..\Fish dog\contacto.HTML"">Contacto</a>
+  <a href="..\Fish dog\ubicacion.HTML">Visítanos</a>
+  <a href="..\Fish dog\producto.html">Producto</a>
+  <a href="..\Fish dog\historia.html">Historia</a>
+  <a href="..\Fish dog\logo.html">Logotipo</a>
+
+  <!-- Espacio para la imagen con enlace al final -->
+  <a href="..\Fish dog\carrito.HTML" style="margin-left: 40px;">
+    <img src="..\Fish dog\carrito.png" alt="Carrito de compras" style="height: 50px; border-radius: 10px;">
+  </a>
+</nav>
+
+<!-- Encabezado -->
+<header>
+  <h1>Hotdog de Atún</h1>
+</header>
+
+<!-- Sección del producto -->
+<section class="product-section">
+  <div class="product-image">
+    <video width="500" autoplay muted loop>
+      <source src="..\Fish dog\VIDEO COMERCIAL.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+  </div>
+  <div class="product-details">
+    <h2>Un giro saludable al clásico hotdog</h2>
+    <p>
+      Presentamos el <b>Hotdog de Atún</b>: una salchicha suave y jugosa, hecha con atún de alta calidad y especias naturales, servida en pan artesanal con ingredientes frescos.
+    </p>
+    <p>
+      Ideal para quienes buscan una opción nutritiva, con alto valor proteico, menos grasa y un sabor innovador.
+    </p>
+  </div>
+</section>
+
+<!-- Características destacadas -->
+<section class="features">
+  <h3>¿Por qué elegir este producto?</h3>
+  <div class="feature-grid">
+    <div class="feature">
+      <h4>Rico en Omega-3</h4>
+      <p>El atún aporta grasas buenas que cuidan tu corazón y tu cerebro.</p>
+    </div>
+    <div class="feature">
+      <h4>Más ligero</h4>
+      <p>Menos calorías y grasa que un hotdog tradicional.</p>
+    </div>
+    <div class="feature">
+      <h4>Innovador</h4>
+      <p>Un concepto que reinventa la comida rápida con creatividad y sabor.</p>
+    </div>
+    <div class="feature" style="grid-column: 1 / -1; max-width: 400px; margin: auto;">
+      <h4>Sostenible</h4>
+      <p>Utiliza atún de pesca responsable, reduciendo el impacto ambiental.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Banner visual con logo -->
+<div class="banner">
+  <!-- Puedes agregar aquí una imagen promocional si deseas -->
+</div>
+
+<!-- Pie de página -->
+<footer>
+  &copy; 2025 Fishdog | <a href="https://www.fishdogrestaurante.com" style="color: white;">fishdogrestaurante.com</a>
+</footer>
+
+</body>
+</html>

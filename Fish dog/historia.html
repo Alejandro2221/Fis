@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Historia de Fishdog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff3b0, #ffe29a, #ffb347);
+      margin: 0;
+      padding: 0;
+      color: #4a2c00;
+    }
+
+   
+    .menu {
+      background-color: #151723;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .menu a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .menu a:hover {
+      background-color: #2e2e38;
+    }
+
+    .logo {
+      height: 70px;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+
+    header {
+      background-color: #ffb266;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      color: #d84315;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #ffb266;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .container {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ffb266;
+      border: 4px solid white;
+      top: 25px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .left::before {
+      right: -10px;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::before {
+      left: -10px;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left .content {
+      margin-left: 40px;
+      border-left: 8px solid #ffb266;
+    }
+
+    .right .content {
+      margin-right: 40px;
+      border-right: 8px solid #ffb266;
+    }
+
+    .tarjetas-container {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .fila {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 250px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card-front {
+      background-color: white;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background-color: #fe583b;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #ffb266;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .left .content,
+      .right .content {
+        margin-left: 30px;
+        border-left: 8px solid #ffb266;
+        border-right: none;
+      }
+
+      .left::before,
+      .right::before {
+        left: 30px;
+        right: auto;
+      }
+
+      .timeline::after {
+        left: 30px;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="menu">
+  <a href="..\Fish dog\indice1.html">
+    <img class="logo" src="..\Fish dog\logo.jpg" alt="Logo">
+  </a>
+  <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+  <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+  <a href="..\Fish dog\innovacion.html">Innovacion</a>
+  <a href="..\Fish dog\politicas.html">Politicas</a>
+  <a href="..\Fish dog\Mision.html">Mision</a>
+  <a href="..\Fish dog\Vision.html">Vision</a>
+  <a href="..\Fish dog\Valores.html">Valores</a>
+  <a href="..\Fish dog\contacto.HTML">Contacto</a>
+  <a href="..\Fish dog\ubicacion.HTML">Visitanos</a>
+  <a href="..\Fish dog\producto.html">Producto</a>
+  <a href="..\Fish dog\historia.html">Historia</a>
+  <a href="..\Fish dog\logo.html">Logotipo</a>
+  <a href="..\Fish dog\carrito.HTML" style="margin-left: 40px;">
+    <img src="..\Fish dog\carrito.png" alt="Carrito" style="height: 50px; border-radius: 10px;">
+  </a>
+</div>
+
+<header>
+  <h1>Fishdog</h1>
+</header>
+
+
+<h2>Nuestra Historia</h2>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <p>Todo comenzó con una idea atrevida: fusionar sabores del mar con la esencia de la comida callejera. Así nació Fishdog, con un solo carrito y mucha creatividad.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <p>El concepto se volvió popular rápidamente. Lo que parecía una moda pasajera se transformó en una experiencia gastronómica diferente que la gente amó desde el primer bocado.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <p>Fishdog abrió su primer local y se convirtió en un punto de encuentro para quienes buscan algo fuera de lo común: sabores intensos, texturas frescas y un ambiente relajado.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <p>Hoy, Fishdog no solo es una marca: es una comunidad de amantes del sabor, la innovación y la comida hecha con alma.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="tarjetas-container">
+  <h2>Conoce de nosotros</h2>
+  <div class="fila">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="..\Fish dog\cin.jpg" alt="Imagen 1">
+        </div>
+        <div class="card-back">
+          <h3>Cinthia</h3>
+          <p>Jefa del área administrativa. Encargada del control de productos, ventas y compras.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="..\Fish dog\hanna.jpg" alt="Imagen 2">
+        </div>
+        <div class="card-back">
+          <h3>Hanna</h3>
+          <p>Encargada de marketing. Responsable de promociones, contenido visual y publicidad.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="..\Fish dog\jimena.jpg" alt="Imagen 3">
+        </div>
+        <div class="card-back">
+          <h3>Jimena</h3>
+          <p>Líder de producción. Ideó la empresa y desarrolló el producto innovador que nos distingue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fila" style="margin-top: 30px;">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="..\Fish dog\martin.jpg"alt="Imagen 4">
+        </div>
+        <div class="card-back">
+          <h3>Martin</h3>
+          <p>Gerente general. Supervisa todas las áreas y vela por el correcto funcionamiento de Fishdog.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="..\Fish dog\jona.jpg" alt="Imagen 5">
+        </div>
+        <div class="card-back">
+          <h3>Jonathan</h3>
+          <p>Repartidor confiable y cordial. Garantiza que tu comida llegue a tiempo y en perfecto estado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  &copy; 2025 Fishdog | <a href="https://www.fishdogrestaurante.com" style="color: white;">fishdogrestaurante.com</a>
+</footer>
+
+</body>
+</html>

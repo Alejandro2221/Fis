@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff3b0;
+    }
+
+    nav {
+      background-color: #151723;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.3em; 
+      font-family: Arial, sans-serif;
+    }
+
+    nav a:hover {
+      background-color: #2e2e38;
+    }
+
+    nav img {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+   
+    header {
+      background-color: #ffd95c;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+      font-size: 2.5em;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contenido {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 30px;
+    }
+
+    .cuadro {
+      background-color: #f5f5dc;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagen-container {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 auto;
+    }
+
+    .imagen-container img {
+      width: 58%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .imagen-container:hover img {
+      transform: scale(1.2);
+    }
+
+    .descripcion-container {
+      background-color: #f5f5dc;
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      text-align: justify;
+      min-height: 494px;
+      font-family: Arial, sans-serif;
+    }
+
+    .descripcion-container p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .color-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .color-list li {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .color-naranja {
+      color: #f7bd56;
+    }
+
+    .color-amarillo {
+      color: #ffcc00;
+    }
+
+    .color-verde {
+      color: #4caf50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 50%;
+      padding: 20px;
+      border: none;
+      vertical-align: top;
+    }
+
+    @media screen and (max-width: 900px) {
+      .contenido {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      td {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a href="..\Fish dog\indice1.html">
+      <img src="..\Fish dog\logo.jpg" alt="Logo" width="80" height="80">
+    </a>
+    <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+    <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+    <a href="..\Fish dog\innovacion.html">Innovación</a>
+    <a href="..\Fish dog\politicas.html">Políticas</a>
+    <a href="..\Fish dog\Mision.html">Misión</a>
+    <a href="..\Fish dog\Vision.html">Visión</a>
+    <a href="..\Fish dog\Valores.html">Valores</a>
+    <a href="..\Fish dog\contacto.HTML">Contacto</a>
+    <a href="..\Fish dog\ubicacion.HTML">Visítanos</a>
+    <a href="..\Fish dog\producto.html">Producto</a>
+    <a href="..\Fish dog\historia.html">Historia</a>
+    <a href="..\Fish dog\logo.html">Logotipo</a>
+    <a href="..\Fish dog\carrito.HTML" style="margin-left: 30px;">
+      <img src="..\Fish dog\carrito.png" alt="Carrito" style="height: 60px; border-radius: 10px;">
+    </a>
+  </nav>
+
+ 
+  <header>
+    Conoce Nuestro Logo
+  </header>
+
+  <div class="contenido">
+    <table>
+      <tr>
+        <td>
+          <div class="cuadro">
+            <div class="imagen-container">
+              <img src="..\Fish dog\logo.jpg" alt="Logo con zoom">
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="cuadro descripcion-container">
+            <h2>Nuestro Logo</h2>
+            <p>
+              Nuestro logo tiene un fondo un naranja muy sutil lo que le da un toque suave y alegre.
+              En el centro se encuentra un hot dog con una salchicha en forma de atún lo que representa nuestra empresa.
+              Tiene colores que atraen al consumidor con un abrazo cálido. A continuación te explico más sobre los colores:
+            </p>
+            <ul class="color-list">
+              <li><span class="color-naranja">Naranja</span>: El color naranja es suave y alegre, lo que simboliza el éxito y la creatividad del negocio.</li>
+              <li><span class="color-amarillo">Amarillo</span>: Este color atrae al consumidor con abrazo cálido.</li>
+              <li><span class="color-verde">Verde</span>: El verde representa la frescura de la vida y la calidad de los ingredientes naturales.</li>
+            </ul>
+            <p>
+              Alrededor del hot dog se encuentra nuestro eslogan y el nombre de la empresa,
+              lo que sugiere que el logo es una representación visual de la marca.
+              Y todo esto junto es una forma creativa de comunicar el enfoque de nuestra empresa.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
+

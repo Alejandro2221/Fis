@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FishDog - Un Mundo Mejor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:  #ffd95c;
+      --secondary: #ffd07e;
+      --bg: #fff3b0;
+      --text: #333;
+      --accent: #5cbdb9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+ 
+    .menu {
+      background-color: #151723;
+      overflow-x: auto;
+      white-space: nowrap;
+font-family: Arial, sans-serif;
+ padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    }
+
+    .menu a {
+            display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.2em;
+
+    }
+
+    .menu a:hover {
+      background-color: #2e2e38;
+    }
+
+    .menu .logo {
+      height: 60px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.2em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 30px 0 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .imagen-principal img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contenido {
+      max-width: 800px;
+      margin: 30px auto;
+      font-size: 1.1em;
+      text-align: justify;
+      line-height: 1.7;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #ff6600;
+      margin-bottom: 30px;
+    }
+
+    .productos {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      .menu {
+        flex-direction: column;
+      }
+
+      .menu a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <div class="menu">
+    <a href="..\Fish dog\indice1.html">
+      <img class="logo" src="..\Fish dog\logo.jpg" alt="Logo">
+    </a>
+    <a href="..\Fish dog\quienes somos.html">Quienes Somos</a>
+    <a href="..\Fish dog\mundo mejor.html">Mundo Mejor</a>
+    <a href="..\Fish dog\innovacion.html">Innovación</a>
+    <a href="..\Fish dog\politicas.html">Políticas</a>
+    <a href="..\Fish dog\Mision.html">Misión</a>
+    <a href="..\Fish dog\Vision.html">Visión</a>
+    <a href="..\Fish dog\Valores.html">Valores</a>
+    <a href="..\Fish dog\contacto.HTML">Contacto</a>
+    <a href="..\Fish dog\ubicacion.HTML">Visítanos</a>
+    <a href="..\Fish dog\producto.html">Producto</a>
+    <a href="..\Fish dog\historia.html">Historia</a>
+    <a href="..\Fish dog\logo.html">Logotipo</a>
+    <a href="..\Fish dog\carrito.HTML" style="margin-left: 10px;">
+      <img src="..\Fish dog\carrito.png" alt="Carrito" style="height: 50px; border-radius: 10px;">
+    </a>
+  </div>
+
+  <header>
+    <h1>Un Mundo Mejor</h1>
+    <p>Fish Dog</p>
+    <nav>
+    </nav>
+  </header>
+
+  <section id="inicio" class="section">
+    <div class="imagen-principal">
+      <img src="..\Fish dog\hotd.png"alt="logo de Fish Dog">
+    </div>
+    <div class="contenido">
+      <p><strong>Fish Dog</strong> es un concepto innovador que fusiona la clásica presentación del hot dog con una alternativa saludable y de origen marino. Está revolucionando la industria con su enfoque en la responsabilidad ambiental y social. Con una visión clara de un futuro más sostenible, Fish Dog está liderando el camino hacia un mundo mejor. Su dedicación a la calidad y la innovación es inspiradora y su impacto positivo en la comunidad es notable.</p>
+    </div>
+  </section>
+
+  <section id="empresa" class="section">
+    <h2>Nuestra Empresa</h2>
+    <div class="contenido">
+      <p>En <strong>Fish Dog</strong>, nos esforzamos por crear un impacto positivo en la comunidad y el medio ambiente. Nuestra misión es innovar y liderar en la industria, mientras mantenemos un compromiso firme con la sostenibilidad y la responsabilidad social. Trabajamos cada día para hacer de nuestro mundo un lugar mejor.</p>
+    </div>
+  </section>
+
+  <section id="productos" class="section">
+    <h2>Productos Destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <p><strong>Reducir residuos:</strong> Implementar prácticas de reciclaje y minimizar el uso de plásticos y otros materiales no biodegradables.</p>
+      </div>
+      <div class="producto">
+        <p><strong>Productos sostenibles:</strong> Ofrecer productos que sean amigables con el medio ambiente, como alimentos sostenibles o productos de limpieza ecológicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 FishDog. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
